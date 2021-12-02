@@ -9,9 +9,7 @@ levels: List[int]
 with open(INPUT_FILE_NAME, "r") as input_file:
     levels = [int(line.strip()) for line in input_file]
 
-agg_levels: List[int] = [
-    sum(levels[i:i+3]) for i in range(len(levels) - 2)
-]
+agg_levels: List[int] = [sum(levels[i : i + 3]) for i in range(len(levels) - 2)]
 
 # print(agg_levels)
 
