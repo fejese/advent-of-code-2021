@@ -14,10 +14,12 @@ num_length: int = len(nums[0])
 gamma_rate: int = 0
 epsilon_rate: int = 0
 
+
 def get_distribution(nums: List[str], pos: int) -> Tuple[int, int]:
     zeroes: int = len([num for num in nums if num[i] == "0"])
     ones: int = len(nums) - zeroes
     return (zeroes, ones)
+
 
 oxygen_nums = [num for num in nums]
 co2_nums = [num for num in nums]
