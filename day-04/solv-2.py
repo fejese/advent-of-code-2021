@@ -12,12 +12,8 @@ class Board:
         for row in nums:
             for num in row:
                 self.all_nums.add(num)
-        self.sets: List[Set[int]] = [
-            set(row)
-            for row in nums
-        ] + [
-            set([row[c] for row in nums])
-            for c in range(len(nums[0]))
+        self.sets: List[Set[int]] = [set(row) for row in nums] + [
+            set([row[c] for row in nums]) for c in range(len(nums[0]))
         ]
         # print(self.all_nums, self.sets)
 
@@ -41,16 +37,11 @@ class Board:
 with open(INPUT_FILE_NAME, "r") as input_file:
     parts: List[str] = input_file.read().strip().split("\n\n")
 
-series = [
-    int(n) for n in parts[0].strip().split(",")
-]
+series = [int(n) for n in parts[0].strip().split(",")]
 boards = [
     Board(
         [
-            [
-                int(n)
-                for n in line.strip().replace("  ", " ").split(" ")
-            ]
+            [int(n) for n in line.strip().replace("  ", " ").split(" ")]
             for line in part.split("\n")
         ]
     )
