@@ -15,7 +15,7 @@ for _ in range(256):
     # print(fish_per_age)
     zeroes: int = fish_per_age[0]
     for age in range(8):
-        fish_per_age[age] = fish_per_age[age+1]
+        fish_per_age[age] = fish_per_age[age + 1]
     fish_per_age[8] = zeroes
     fish_per_age[6] += zeroes
 
