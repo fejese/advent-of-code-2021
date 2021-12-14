@@ -24,6 +24,8 @@ PY
     chmod +x "$solv"
 done
 
+touch "$dir/input" "$dir/test-input"
+
 echo "Input?"
 cat > "$dir/input"
 
