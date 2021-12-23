@@ -216,7 +216,7 @@ def simplify(actions: List[Action]) -> Tuple[List[Action], bool]:
         #     if need_break:
         #         break
         simplified_actions += intersection_actions
-        simplified_actions += actions[ai + 1:]
+        simplified_actions += actions[ai + 1 :]
         if need_break:
             break
     print(f"  last action: {ai}")
